@@ -3,7 +3,6 @@ import time
 word = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
 
 def SequencesV1(word) :
-    
     totalV1 = 0
     for i in word :
         if i != " " :
@@ -17,7 +16,6 @@ start = time.time()
 print('Answer SequencesV1 : ', SequencesV1(word))
 print('Time SequencesV1 : ', (time.time()-start)*1000)
 print('-'*30)
-
 
 def SequencesV2(word) :
     totalV2 = 0
