@@ -16,3 +16,27 @@ def partition(data_list,first,last) :
     rightmark = last
     done = False
     while not done:
+
+        while leftmark <= rightmark and data_list[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+        while data_list[rightmark] >= pivotvalue and rightmark >= leftmark:
+           rightmark = rightmark -1
+
+        if rightmark < leftmark:
+           done = True
+        else:
+           temp = data_list[leftmark]
+           data_list[leftmark] = data_list[rightmark]
+           data_list[rightmark] = temp
+
+    temp = data_list[first]
+    data_list[first] = data_list[rightmark]
+    data_list[rightmark] = temp
+
+
+    return rightmark
+
+data_list = [54,26,93,17,77,31,44,55,20]
+quickSort(data_list)
+print(data_list)
