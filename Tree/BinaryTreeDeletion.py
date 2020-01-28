@@ -1,5 +1,6 @@
 indexleft = 0
 idnexright = 0
+index = 0
 class Node :
 
     def __init__(self, data):
@@ -9,7 +10,6 @@ class Node :
         self.data = data
 
     def insert(self,data) :
-
         if self.data :
             if data < self.data :
                 if self.left is None :
@@ -23,45 +23,51 @@ class Node :
                     self.right.insert(data)
         else :
             self.data = data
-    
+
     def Deletion(self, dele) :
         global index
 
-        if dele == self.data :
-            indexleft = 0
-            indexright = 0
-            if self.left is None :
-                indexleft = 1
-            if self.right is None : 
-                indexright = 1
-            if indexleft == 1 and indexright == 1 :
-                self.data = ""
-            else :
+        if dele == self.data and index == 0 :
+            self.data = self.right.left.data
+            self.right.left.data = ""
+        else :
+            index = 1
+
+            if dele == self.data and index != 0 : # ไม่มีตัวเชื่อม
                 indexleft = 0
                 indexright = 0
-                if self.left is not None :
+                if self.left is None :
                     indexleft = 1
-                if self.right is not None : 
+                if self.right is None : 
                     indexright = 1
                 if indexleft == 1 and indexright == 1 :
-                    self.data = self.left.data
-                    self.left.data = ""
-                else :
-                    if indexleft == 1 and indexright != 1 :
+                    self.data = ""
+                else : # มีตัวเชื่อม
+                    indexleft = 0
+                    indexright = 0
+                    if self.left is not None :
+                        indexleft = 1
+                    if self.right is not None : 
+                        indexright = 1
+                    if indexleft == 1 and indexright == 1 :
                         self.data = self.left.data
                         self.left.data = ""
-                    if indexright == 1 and indexleft != 1 :
-                        self.data =  self.right.data
-                        self.right.data = ""
-        elif dele != self.data :
-            if dele < self.data :
-                if self.left is None :
-                    pass
-                return self.left.Deletion(dele)
-            elif dele > self.data :
-                if self.right is None :
-                    pass
-                return self.right.Deletion(dele)
+                    else :
+                        if indexleft == 1 and indexright != 1 :
+                            self.data = self.left.data
+                            self.left.data = ""
+                        if indexright == 1 and indexleft != 1 :
+                            self.data =  self.right.data
+                            self.right.data = ""
+            elif dele != self.data  :
+                if dele < self.data :
+                    if self.left is None :
+                        pass
+                    return self.left.Deletion(dele)
+                elif dele > self.data :
+                    if self.right is None :
+                        pass
+                    return self.right.Deletion(dele)
 
     def PrintTree(self) :
         if self.left :
@@ -87,6 +93,6 @@ root.insert(120)
 
 
 print(root.inorderTraversal(root))
-root.Deletion(120)
+root.Deletion(100)
 
 print(root.inorderTraversal(root))

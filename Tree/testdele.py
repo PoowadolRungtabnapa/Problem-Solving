@@ -23,11 +23,36 @@ class Node :
             self.data = data
     
     def Deletion(self, dele) :
-        if dele == self.data :
+        if dele == self.data : # ไม่มีตัวเชื่อม
+            indexl = 0
+            indexr = 0
             if self.left is None :
-                index += 1
-            if self.right is None : 
-                index += 1
+                indexl = 1
+            if self.right is None :
+                indexr = 1
+            if indexl == 1 and indexr == 1 :
+                self.data = None
+            else : # มีตัวเชื่อม
+                indexl = 0
+                indexr = 0
+                if self.left is not None :
+                    indexl = 1
+                if self.right is not None :
+                    indexr = 1
+                if self.left == 1 or self.right == 1 :
+                    self.data = self.left.data
+                    self.left.data = None
+        elif dele != self.data :
+            if dele < self.data :
+                if self.left is None :
+                    pass
+                return self.left.Deletion(dele)
+            elif dele > self.data :
+                if self.right is None :
+                    pass
+                return self.right.Deletion(dele)
+        
+        # ตัวบนสุด
         
 
     def PrintTree(self) :
@@ -46,6 +71,6 @@ root.insert(120)
 
 root.PrintTree()
 print('='*10)
-root.Deletion(60)
+root.Deletion(50)
 print('='*10)
 root.PrintTree()
