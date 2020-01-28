@@ -1,4 +1,3 @@
-    
 class Node :
 
     def __init__(self, data):
@@ -7,8 +6,8 @@ class Node :
         self.right = None
         self.data = data
 
-# Insert
     def insert(self,data) :
+
         if self.data :
             if data < self.data :
                 if self.left is None :
@@ -22,18 +21,14 @@ class Node :
                     self.right.insert(data)
         else :
             self.data = data
-# Search            
-    def findval(self, lkpval) :
-            if lkpval < self.data :
-                if self.left is None :
-                    return str(lkpval) + " Not Found"
-                return self.left.findval(lkpval)
-            elif lkpval > self.data :
-                if self.right is None :
-                    return str(lkpval) + " Not Found"
-                return self.right.findval(lkpval)
-            else :
-                print(str(self.data) + ' is found')
+    
+    def Deletion(self, dele) :
+        if dele == self.data :
+            if self.left is None :
+                index += 1
+            if self.right is None : 
+                index += 1
+        
 
     def PrintTree(self) :
         if self.left :
@@ -42,12 +37,15 @@ class Node :
         if self.right :
             self.right.PrintTree()
 
-# Head
-root = Node(25)
-# Insert
-for i in range (0,51) :
-    root.insert(i)
-# Searching
-root.findval(50)
-# PrintAllTree
-#root.PrintTree()
+root = Node(100)
+root.insert(50)
+root.insert(30)
+root.insert(60)
+root.insert(150)
+root.insert(120)
+
+root.PrintTree()
+print('='*10)
+root.Deletion(60)
+print('='*10)
+root.PrintTree()
