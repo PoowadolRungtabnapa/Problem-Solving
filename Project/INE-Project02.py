@@ -16,3 +16,13 @@ City = ['Narathiwat','Yala','Pattani','Songkhla','Satun','Trang','Phatthalung','
         'Nong BuaLamphu','Loei','Phitsanulok','Sukhothai','Nong Khai','Bueng Kan','Uttaradit','Phrae',
         'Nan','Lampang','Lamphun','Mae Hong Son','Chiang Mai','Phayao','Chiang Rai']
 
+def CountRoad() :
+        pass
+
+def FindRoad() :
+        pass
+
+def main() :
+        pass
+
+main()
