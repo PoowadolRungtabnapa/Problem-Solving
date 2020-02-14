@@ -1,34 +1,26 @@
-L = ['A','B','C','D','E','F']
-a = len(L)
-y = 'Y'
+import networkx as nx
+import matplotlib.pyplot as plt
 
-J = int(input('Enter Number : '))
+G = nx.Graph()
 
-while len(L) != 1 :
-    I = J - 1
-    while I >= len(L) :
-        if I >= len(L) :
-            I = I - len(L)
-    if a == len(L) :
-        print(L[I])
-        k = L.index(L[I]) 
-        L.remove(L[I])
-        print(I)
-        print(L)
+G.add_edges_from([('A','B'),('A','C'),('A','D'),('C','K'),('K','G'),('G','H'),
+                  ('B','H'),('B','G'),('D','E'),('E','Z'),('H','J'),('F','J'),('J','Z'),
+                  ('B','K'),('H','E'),('H','F')])
+
+D = set()
+l = input('Enetr : ')
+Alist = nx.neighbors(G,l)
+for i in Alist :
+  F = nx.neighbors(G,i)
+  for j in F :
+    if i in j :
+      pass
     else :
-        print(L[I])
-        k = L.index(L[I])
-        print(k)
-        if k == 0 :
-            pass
-        else :
-            k += 1
-        while I >= len(L) :
-            if I >= len(L) :
-                I = I - len(L)
-        print(I)
-        L.remove(L[I])
-        I = I + k
-        print(I)
-        print(L)
+      D.add(j)
+
+for i in nx.neighbors(G,l) :
+  if i in D :
+    D.remove(i)
     
+D.remove(l)
+print(D)
