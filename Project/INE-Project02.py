@@ -7,219 +7,6 @@ from time import strftime
 index = 0
 
 G = nx.Graph()
-#sout
-G.add_edge('Narathiwat','Yala', weight=128)
-G.add_edge('Narathiwat','Pattani', weight=35)
-G.add_edge('Pattani', 'Yala', weight=94)
-G.add_edge('Pattani','Songkhla', weight=99)
-G.add_edge('Yala', 'Songkhla', weight=128)
-G.add_edge('Songkhla','Satun', weight=125)
-G.add_edge('Songkhla', 'Phatthalung', weight=121)
-G.add_edge('Satun', 'Trang', weight=140)
-G.add_edge('Trang', 'Phatthalung', weight=56)
-G.add_edge('Trang', 'Krabi', weight=131)
-G.add_edge('Trangt','Nakhon Si Thammarat', weight=123)
-G.add_edge('Phatthalung', 'Nakhon Si Thammarat', weight=99)
-G.add_edge('Nakhon Si Thammarat', 'Krabi', weight=223)
-G.add_edge('Nakhon Si Thammarat', 'Surat Thani', weight=134)
-G.add_edge('Krabi', 'Surat Thani', weight=211)
-G.add_edge('Krabi', 'Phangnga', weight=86)
-G.add_edge('Phangnga', 'Surat Thani', weight=196)
-G.add_edge('Phangnga', 'Phuket', weight=87)
-G.add_edge('Surat Thani', 'Chumphon', weight=193)
-G.add_edge('Surat Thani', 'Ranong', weight=219)
-G.add_edge('Phangnga', 'Ranong', weight=226)
-G.add_edge('Ranong', 'Chumphon', weight=117)
-G.add_edge('Chumphon', 'Prachuap Khiri Khan', weight=183)
-G.add_edge( 'Prachuap Khiri Khan', 'Phetchaburi', weight=158)
-G.add_edge('Phetchaburi', 'Ratchaburi', weight=54)
-G.add_edge('Ranong', 'Chumphon', weight=117)
-G.add_edge('Chumphon', 'Prachuap Khiri Khan', weight=183)
-#noth
-G.add_edge('Chiang rai', 'Phayao', weight=94)
-G.add_edge('Chiang rai', 'Chiang mai', weight=182)
-G.add_edge('Chiang rai', 'Lampang', weight=225)
-G.add_edge('Phayao', 'Chiang rai', weight=94)
-G.add_edge('Phayao', 'Lampang', weight=131)
-G.add_edge('Phayao', 'Nan', weight=176)
-G.add_edge('Phayao', 'Phrae', weight=141)
-G.add_edge('Mae Hong Son', 'Chiang mai', weight=349)
-G.add_edge('Mae Hong Son', 'Tak', weight=499)
-G.add_edge('Chiang mai', 'Chiang rai', weight=182)
-G.add_edge('Chiang mai', 'Lampang', weight=92)
-G.add_edge('Chiang mai', 'Lampoon', weight=21)
-G.add_edge('Chiang mai', 'Tak', weight=265)
-G.add_edge('Chiang mai', 'Mae Hong son', weight=349)
-G.add_edge('Lampoon', 'Lampang', weight=71)
-G.add_edge('Lampoon', 'Chiang mai', weight=21)
-G.add_edge('Lampoon', 'Tak', weight=244)
-G.add_edge('Lampang', 'Chiang rai', weight=97)
-G.add_edge('Lampang', 'Chiang mai', weight=92)
-G.add_edge('Lampang', 'Phayao', weight=131)
-G.add_edge('Lampang', 'Phrae', weight=109)
-G.add_edge('Lampang', 'Sukhothai', weight=207)
-G.add_edge('Lampang', 'Tak', weight=174)
-G.add_edge('Lampang', 'Lampoon', weight=71)
-G.add_edge('Phrae', 'Phayao', weight=141)
-G.add_edge('Phrae', 'Nan', weight=118)
-G.add_edge('Phrae', 'Lampang', weight=109)
-G.add_edge('Phrae', 'Uttaradit', weight=74)
-G.add_edge('Phrae', 'Sukhothai', weight=165)
-G.add_edge('Nan', 'Phrae', weight=118)
-G.add_edge('Nan', 'Uttaradit', weight=191)
-G.add_edge('Nan', 'Phayao', weight=118)
-G.add_edge('Tak', 'Mae Hong son', weight=499)
-G.add_edge('Tak', 'Chiang mai', weight=265)
-G.add_edge('Tak', 'Lampoon', weight=244)
-G.add_edge('Tak', 'Lampang', weight=174)
-G.add_edge('Tak', 'Sukhothai', weight=79)
-G.add_edge('Tak', 'Kamphaeng Phet', weight=68)
-G.add_edge('Tak', 'Nakhonsawan', weight=185)
-G.add_edge('Tak', 'Uthai Thani', weight=234)
-G.add_edge('Sukhothai', 'Phrae', weight=165)
-G.add_edge('Sukhothai', 'Uttaradit', weight=100)
-G.add_edge('Sukhothai', 'Phitsanulok', weight=59)
-G.add_edge('Sukhothai', 'Kamphaeng phet', weight=77)
-G.add_edge('Sukhothai', 'Tak', weight=79)
-G.add_edge('Sukhothai', 'Lampang', weight=207)
-G.add_edge('Uttaradit', 'Phrae', weight=74)
-G.add_edge('Uttaradit', 'Nan', weight=191)
-G.add_edge('Uttaradit', 'Sukhothai', weight=100)
-G.add_edge('Uttaradit', 'Phitsanulok', weight=118)
-G.add_edge('Phitsanulok', 'Phetchabun', weight=170)
-G.add_edge('Phitsanulok', 'Sukhothai', weight=59)
-G.add_edge('Phitsanulok', 'Kamphaeng Phet', weight=103)
-G.add_edge('Phitsanulok', 'Phichit', weight=73)
-G.add_edge('Phitsanulok', 'Uttaradit', weight=118)
-G.add_edge('Kamphaeng Phet', 'Tak', weight=68)
-G.add_edge('Kamphaeng Phet', 'Phichit', weight=90)
-G.add_edge('Kamphaeng Phet', 'Nakhonsawan', weight=117)
-G.add_edge('Kamphaeng Phet', 'Sukhothai', weight=77)
-G.add_edge('Kamphaeng Phet', 'Phitsanulok', weight=103)
-G.add_edge('Phichit', 'Phitsanulok', weight=73)
-G.add_edge('Phichit', 'Kamphaeng Phet', weight=90)
-G.add_edge('Phichit', 'Nakhonsawan', weight=113)
-G.add_edge('Phichit', 'Phetchabun', weight=129)
-G.add_edge('Nakhonsawan', 'Phichit', weight=113)
-G.add_edge('Nakhonsawan', 'Phetchabun', weight=184)
-G.add_edge('Nakhonsawan', 'Kamphaeng Phet', weight=117)
-G.add_edge('Nakhonsawan', 'Uthai Thani', weight=50)
-G.add_edge('Nakhonsawan', 'Tak', weight=185)
-G.add_edge('Phetchabun', 'Phichit', weight=129)
-G.add_edge('Phetchabun', 'Phitsanulok', weight=170)
-G.add_edge('Phetchabun', 'Nakhonsawan', weight=184)
-G.add_edge('Uthai Thani', 'Tak', weight=234)
-G.add_edge('Uthai Thani', 'Nakhonsawan', weight=50)
-#mid
-G=nx.Graph()
-G.add_edge('Bangkok','Samut Prakan',weight=29)
-G.add_edge('Bangkok','Samut Sakhon',weight=36)
-G.add_edge('Bangkok','Nakhon Pathom',weight=56)
-G.add_edge('Bangkok','Nonthaburi',weight=20)
-G.add_edge('Bangkok','Pathum Thani',weight=46)
-G.add_edge('Bangkok','Prachinburi',weight=136)
-G.add_edge('Bangkok','Chachoengsao',weight=82)
-
-G.add_edge('Trat','Chanthaburi',weight=70)
-
-G.add_edge('Chanthaburi','Rayong',weight=110)
-G.add_edge('Chanthaburi','Chonburi',weight=164)
-G.add_edge('Chanthaburi','Chachoengsao',weight=228)
-G.add_edge('Chanthaburi','Sa Kaeo',weight=258)
-
-G.add_edge('Rayong','Chonburi',weight=98)
-
-G.add_edge('Chonburi','Samut Prakan',weight=64)
-G.add_edge('Chonburi','Chachoengsao',weight=43)
-G.add_edge('Samut Prakan','Chachoengsao',weight=71)
-G.add_edge('Sa Kaeo','Chachoengsao',weight=245)
-G.add_edge('Sa Kaeo','Prachinburi',weight=98)
-
-G.add_edge('Prachinburi','Nakhon Nayok',weight=29)
-
-G.add_edge('Nakhon Nayok','Saraburi',weight=58)
-G.add_edge('Nakhon Nayok','Pathum Thani',weight=101)
-
-G.add_edge('Saraburi','Lopburi',weight=46)
-G.add_edge('Saraburi','Phra Nakhon Si Ayutthaya',weight=63)
-G.add_edge('Saraburi','Pathum Thani',weight=101)
-G.add_edge('Saraburi','Ang Thong',weight=58)
-G.add_edge('Saraburi','Sing Buri',weight=79)
-
-G.add_edge('Samut Sakhon','Samut Prakan',weight=65)
-G.add_edge('Samut Songkhram','Samut Sakhon',weight=37)
-G.add_edge('Prachuap Khiri Khan','Phetchaburi',weight=158)
-G.add_edge('Phetchaburi','Ratchaburi',weight=54)
-G.add_edge('Phetchaburi','Samut Songkhram',weight=53)
-
-G.add_edge('Ratchaburi','Samut Songkhram',weight=43)
-G.add_edge('Ratchaburi','Samut Prakan',weight=129)
-G.add_edge('Ratchaburi','Nakhon Pathom',weight=41)
-G.add_edge('Ratchaburi','Suphan Buri',weight=147)
-G.add_edge('Ratchaburi','Kanchanaburi',weight=87)
-G.add_edge('Kanchanaburi','Suphan Buri',weight=91)
-
-G.add_edge('Suphan Buri','Chai Nat',weight=294)
-G.add_edge('Suphan Buri','Sing Buri',weight=1056)
-G.add_edge('Suphan Buri','Ang Thong',weight=44)
-G.add_edge('Suphan Buri','Phra Nakhon Si Ayutthaya',weight=176)
-G.add_edge('Suphan Buri','Nakhon Pathom',weight=105)
-G.add_edge('Nakhon Pathom','Samut Sakhon',weight=85)
-
-G.add_edge('Chai Nat','Sing Buri',weight=53)
-G.add_edge('Chai Nat','Ang Thong',weight=92)
-G.add_edge('Lopburi','Sing Buri',weight=33)
-G.add_edge('Ang Thong','Sing Buri',weight=40)
-G.add_edge('Ang Thong','Lopburi',weight=67)
-G.add_edge('Ang Thong','Phra Nakhon Si Ayutthaya',weight=31)
-
-G.add_edge('Phra Nakhon Si Ayutthaya','Pathum Thani',weight=122)
-G.add_edge('Phra Nakhon Si Ayutthaya','Nonthaburi',weight=96)
-G.add_edge('Phra Nakhon Si Ayutthaya','Nakhon Pathom',weight=132)
-G.add_edge('Pathum Thani','Nonthaburi',weight=26)
-#esan
-G.add_edge('nakornphanom', 'bungkal',weight =176)
-G.add_edge('nakornphanom', 'sakonnakhon',weight =93)
-G.add_edge('nakornphanom', 'mookdaharn',weight =104)
-G.add_edge('bungkal','nongkay',weight =143)
-G.add_edge('bungkal','sakonnakhon',weight =194)
-G.add_edge('nongkay','loey',weight =202)
-G.add_edge('nongkay','udonthani',weight =51)
-G.add_edge('loey','udonthani',weight =152)
-G.add_edge('loey','nongbualamphu',weight =106)
-G.add_edge('loey','khonkaen',weight =206)
-G.add_edge('nongbualamphu','udonthani',weight =46)
-G.add_edge('nongbualamphu','khonkaen',weight =181)
-G.add_edge('udonthani','sakonnakhon',weight =159)
-G.add_edge('udonthani','khonkaen',weight =115)
-G.add_edge('udonthani','kallasin',weight =192)
-G.add_edge('sakonnakhon','kallasin',weight =128)
-G.add_edge('sakonnakhon','mookdaharn',weight =119)
-G.add_edge('mookdaharn','kallasin',weight =172)
-G.add_edge('mookdaharn','royied',weight =162)
-G.add_edge('mookdaharn','yasotorn',weight =166)
-G.add_edge('mookdaharn','amnajcharoen',weight =88)
-G.add_edge('kallasin','khonkaen',weight =77)
-G.add_edge('kallasin','mahasarakham',weight =44)
-G.add_edge('kallasin','royied',weight =47)
-G.add_edge('khonkaen','chaiyaphum',weight =150)
-G.add_edge('khonkaen','mahasarakham',weight =73)
-G.add_edge('khonkaen','buriram',weight =200)
-G.add_edge('khonkaen','nakhonrachasima',weight =190)
-G.add_edge('chaiyaphum','nakhonrachasima',weight =119)
-G.add_edge('mahasarakham','royied',weight =40)
-G.add_edge('mahasarakham','buriram',weight =145)
-G.add_edge('royied','buriram',weight =146)
-G.add_edge('royied','surin',weight =137)
-G.add_edge('royied','srisaket',weight =230)
-G.add_edge('royied','yasotorn',weight =71)
-G.add_edge('yasotorn','amnajcharoen',weight =54)
-G.add_edge('yasotorn','srisaket',weight =159)
-G.add_edge('amnajcharoen','ubonrachathani',weight =75)
-G.add_edge('ubonrachathani','srisaket',weight =61)
-G.add_edge('srisaket','surin',weight =105)
-G.add_edge('surin','buriram',weight =50)
-G.add_edge('buriram','nakhonrachasima',weight =124)
 
 City = ['Narathiwat','Yala','Pattani','Songkhla','Satun','Trang','Phatthalung','Nakhon Si Thammarat',
         'Krabi','Phuket','Phang Nga','Surat Thani','Ranong','Chumphon','Prachuap Khiri Khan','Phetchaburi',
@@ -232,56 +19,61 @@ City = ['Narathiwat','Yala','Pattani','Songkhla','Satun','Trang','Phatthalung','
         'Nong BuaLamphu','Loei','Phitsanulok','Sukhothai','Nong Khai','Bueng Kan','Uttaradit','Phrae',
         'Nan','Lampang','Lamphun','Mae Hong Son','Chiang Mai','Phayao','Chiang Rai']
 
-'''
-M.add_weighted_edges_from([('Loei','Nong Khai',234),('Loei','Nong BuaLamphu',99),('Loei','Khon Kean',207),('Loei','Chaiyaphum',227),
-                           ('Nong Khai','Bueng Kan',135),('Nong Khai','Udon Thani',52),('Nong BuaLamphu','Udon Thani',51),('Udon Thani','Bueng Kan',207),
-                           ('Nong BuaLamphu','Khon Kean',118),('Chaiyaphum','Khon Kean',141),('Khon Kean','Udon Thani',121),('Chaiyaphum','NakonRatchasima',121),
-                           ('Khon Kean','NakonRatchasima',192),('Bueng Kan','Nakhon Phanom',181),('Udon Thani','Sakon Nakhon',166),('Bueng Kan','Sakon Nakhon',196),
-                           ('Udon Thani','Kalasin',149),('Kalasin','Sakon Nakhon',129),('Sakon Nakhon','Nakhon Phanom',94),('Kalasin','Khon Kean',100),
-                           ('Khon Kean','Maha Sarakam',72),('Maha Sarakam','NakonRatchasima',214),('Maha Sarakam','Kalasin',48),('Sakon Nakhon','Mukdahan',114),
-                           ('Kalasin','Mukdahan',164),('Mukdahan','Nakhon Phanom',110),('Kalasin','Roi Et',49),('Roi Et','Maha Sarakam',44),
-                           ('Maha Sarakam','Buriram',149),('Buriram','NakonRatchasima',127),('Buriram','Roi Et',149),('Roi Et','Mukdahan',149),
-                           ('Mukdahan','AmnatCharoen',99),('AmnatCharoen','Yasothon',57),('Yasothon','Mukdahan',115),('Yasothon','Roi Et',68),
-                           ('Yasothon','AmnatCharoen',57),('Buriram','Surin',55),('Surin','Roi Et',145),('Roi Et','Sisaket',146),
-                           ('Sisaket','Surin',106),('Sisaket','Yasothon',103),('Sisaket','Ubon Ratchathani',65),('Ubon Ratchathani','Yasothon',103),
-                           ('Ubon Ratchathani','AmnatCharoen',77),('Kanchanaburi','Suphanburi',98),('Kanchanaburi','NakhonPathom',67),
-                           ('Kanchanaburi','Ratchaburi',81),('Ratchaburi','NakhonPathom',48),('NakhonPathom','Suphanburi',97),('Phetchaburi','Ratchaburi',58),
-                           ('Phetchaburi','Samut Songkhram',57),('Samut Songkhram','Ratchaburi',35),('NakhonPathom','Samut Sakhon',67),
-                           ('Samut Sakhon','Ratchaburi',67),('Samut Sakhon','Samut Songkhram',38),('Suphanburi','Chainat',101),('Chainat','Uthaithani',26),
-                           ('Uthaithani','Nakon Sawan',43),('Nakon Sawan','Chainat',62),('Singburi','Chainat',57),('Chainat','Nakon Sawan',100),
-                           ('AngThong','Singburi',40),('AngThong','Suphanburi',77),('Suphanburi','Ayutthaya',64),('AngThong','Ayutthaya',39),
-                           ('Ayutthaya','NakhonPathom',32),('Nonthaburi','NakhonPathom',64),('Bangkok','Nonthaburi',22),('NakhonPathom','Bangkok',57),
-                           ('Samut Sakhon','Bangkok',36),('Nonthaburi','Ayutthaya',75),('Lopburi','Nakon Sawan',151),('Lopburi','Singburi',32),
-                           ('Lopburi','AngThong',42),('Saraburi','Ayutthaya',69),('Lopburi','Saraburi',47),('Saraburi','PathhumThani',85),
-                           ('PathhumThani','Ayutthaya',60),('PathhumThani','Nonthaburi',27),('PathhumThani','Bangkok',42),('NakhonNayok','Saraburi',58),
-                           ('PathhumThani','NakhonNayok',117),('PrachinBuri','NakhonNayok',20),('PrachinBuri','Bangkok',145),('Chachoengsao','Bangkok',85),
-                           ('Chachoengsao','NakhonNayok',75),('Chachoengsao','PrachinBuri',74),('Samut Prakan','Bangkok',26),('Samut Prakan','Chonburi',70),
-                           ('Chonburi','Chachoengsao',50),('Prachuap Khiri Khan','Chumphon',189),('Ranong','Chumphon',126),('Chumphon','Surat Thani',184),
-                           ('Surat Thani','Ranong',218),('Phang Nga','Ranong',231),('Phang Nga','Surat Thani',159),('Phang Nga','Phuket',87),
-                           ('Phang Nga','Krabi',74),('Krabi','Surat Thani',156),('Surat Thani','Nakhon Si Thammarat',140),('Nakhon Si Thammarat','Krabi',172),
-                           ('Krabi','Trang',126),('Trang','Phatthalung',58),('Phatthalung','Nakhon Si Thammarat',109),('Phatthalung','Songkhla',122),
-                           ('Songkhla','Satun',125),('Satun','Trang',144),('Songkhla','Yala',131),('Songkhla','Pattani',105),('Pattani','Yala',60),
-                           ('Narathiwat','Yala',89),('Narathiwat','Pattani',96),('Mae Hong Son','Chiang Mai',237),
+G.add_weighted_edges_from([('Loei','Nong Khai',202),('Loei','Nong BuaLamphu',106),('Loei','Khon Kean',206),('Loei','Chaiyaphum',227),
+                           ('Nong Khai','Bueng Kan',143),('Nong Khai','Udon Thani',51),('Nong BuaLamphu','Udon Thani',46),
+                           ('Nong BuaLamphu','Khon Kean',181),('Chaiyaphum','Khon Kean',150),('Khon Kean','Udon Thani',115),
+                           ('Chaiyaphum','NakonRatchasima',119),('Buriram','Khon Kean',200),('Khon Kean','NakonRatchasima',190),
+                           ('Bueng Kan','Nakhon Phanom',176),('Udon Thani','Sakon Nakhon',159),('Bueng Kan','Sakon Nakhon',194),
+                           ('Udon Thani','Kalasin',192),('Kalasin','Sakon Nakhon',128),('Sakon Nakhon','Nakhon Phanom',93),
+                           ('Kalasin','Khon Kean',77),('Khon Kean','Maha Sarakam',73),('Maha Sarakam','NakonRatchasima',214),
+                           ('Maha Sarakam','Kalasin',44),('Sakon Nakhon','Mukdahan',119),('Kalasin','Mukdahan',172),('Mukdahan','Nakhon Phanom',104),
+                           ('Kalasin','Roi Et',47),('Roi Et','Maha Sarakam',40),('Maha Sarakam','Buriram',145),('Buriram','NakonRatchasima',124),
+                           ('Buriram','Roi Et',146),('Roi Et','Mukdahan',162),('Mukdahan','AmnatCharoen',88),('AmnatCharoen','Yasothon',54),
+                           ('Yasothon','Mukdahan',166),('Yasothon','Roi Et',71),('Yasothon','AmnatCharoen',57),('Buriram','Surin',50),
+                           ('Surin','Roi Et',137),('Roi Et','Sisaket',230),
+                           ('Sisaket','Surin',105),('Sisaket','Yasothon',159),('Sisaket','Ubon Ratchathani',61),('Ubon Ratchathani','Yasothon',103),
+                           ('Ubon Ratchathani','AmnatCharoen',75),
+
+                           ('Lopburi','NakonRatchasima',198),('Saraburi','NakonRatchasima',152),('NakhonNayok','NakonRatchasima',231),('PrachinBuri','NakonRatchasima',194),
+                           ('NakonRatchasima','Sa Kaew',174),('Sa Kaew','Buriram',221),('Nakhon Sawan','Chainat',64),('Nakhon Sawan','Lopburi',130),('Nakhon Sawan','Saraburi',175),
+                           ('Uthaithani','Kanchanaburi',197),('Uthaithani','Suphanburi',126),('Chaiyaphum','Phetchabun',215),('Chaiyaphum','Lopburi',243),('Loei','Phetchabun',190),
+                           ('Loei','Phitsanulok',269),
+
+
+
                            
-                           ('Mae Hong Son','Tak',508),('Chiang Mai','Chiang Rai',190),
-                          ('Chiang Mai','Lampang',114),('Chiang Mai','Lamphun',39),('Tak','Lamphun',241),
-                          ('Tak','Sukhothai',85),('Tak','Kamphaeng Phet',62),('Chiang Rai','Phayao',92),
-                          ('Lampang','Chiang Rai',229),('Lampang','Phayao',142),('Lampang','Phrae',96),
-                          ('Lampang','Lamphun',82),('Lampang','Tak',188),('Lampang','Sukhothai',195),('Phayao','Nan',148),
-                          ('Phayao','Phrae',143),('Nan','Phrae',119),('Phrae','Sukhothai',163),('Phrae','Uttaradit',72),
-                          ('Sukhothai','Kamphaeng Phet',71),('Sukhothai','Phitsanulok',58),('Uttaradit','Phitsanulok',108),('Uttaradit','Sukhothai',91),
-                          ('Phitsanulok','Kamphaeng Phet',110),('Phitsanulok','Phichit',100),('Phitsanulok','Phetchabun',177),
-                          ('Kamphaeng Phet','Phichit',100),('Kamphaeng Phet','Nakhon Sawan',132),('Phichit','Phetchabun',133),
-                          ('Phichit','Nakhon Sawan',104),('Phetchabun','Nakhon Sawan',174),('Uthai Thani','Nakhon Sawan',43),
-                          
-                          
-                          ( 'Saraburi' , 'PathhumThani',85 ) , ( 'Saraburi' ,'NakhonNayok',58 ) , ('PathhumThani','Nonthaburi',27 ) , ( 'PathhumThani', 'Bangkok', 42) ,
-                          ( 'NakhonNayok','PrachinBuri',20) ,( 'NakhonNayok','Chachoengsao',75 ) , ('Bangkok','Chachoengsao', 85 ) , ( 'PrachinBuri','Chachoengsao',74 ) ,
-                          ('PrachinBuri','Sa Kaew',104) , ('Bangkok','PrachinBuri', 145 ) ,('Bangkok','Samut Prakan', 26 ) , ('Samut Prakan','Chachoengsao', 81) ,
-                          ( 'Samut Prakan' , 'Chonburi',70 ) , ('Chonburi','Chachoengsao',50 ) , ( 'Chachoengsao','Rayong',135 ) , ( 'Chonburi', 'Rayong',98 ) , 
-                          ( 'Rayong' , 'Chanthaburi',110 ) , ('Chachoengsao' ,'Chanthaburi',228 ) , ('Chachoengsao' , 'Sa Kaew',245) , ('Sa Kaew', 'Chanthaburi',161 ) , 
-                          ('Chanthaburi', 'Trat',69 )])
-'''
+                           ('Kanchanaburi','Suphanburi',91),('Kanchanaburi','NakhonPathom',67),('Singburi','Suphanburi',70),
+                           ('Kanchanaburi','Ratchaburi',87),('Ratchaburi','NakhonPathom',41),('NakhonPathom','Suphanburi',105),('Phetchaburi','Ratchaburi',54),
+                           ('Phetchaburi','Samut Songkhram',53),('Samut Songkhram','Ratchaburi',43),('NakhonPathom','Samut Sakhon',85),
+                           ('Samut Sakhon','Ratchaburi',67),('Samut Sakhon','Samut Prakan',65),('Samut Sakhon','Samut Songkhram',37),('Suphanburi','Chainat',101),('Chainat','Uthaithani',26),
+                           ('Uthaithani','Nakon Sawan',43),('Nakon Sawan','Chainat',62),('Singburi','Chainat',53),('Chainat','Nakon Sawan',100),
+                           ('AngThong','Singburi',40),('AngThong','Saraburi',58),('AngThong','Suphanburi',44),('Suphanburi','Ayutthaya',176),('AngThong','Ayutthaya',31),
+                           ('Ayutthaya','NakhonPathom',132),('Nonthaburi','NakhonPathom',64),('Bangkok','Nonthaburi',20),('NakhonPathom','Bangkok',56),
+                           ('Samut Sakhon','Bangkok',36),('Nonthaburi','Ayutthaya',96),('Lopburi','Nakon Sawan',151),('Lopburi','Singburi',53),
+                           ('Lopburi','AngThong',67),('Saraburi','Ayutthaya',63),('Lopburi','Saraburi',46),('Saraburi','PathhumThani',101),('Saraburi','Singburi',79),
+                           ('PathhumThani','Ayutthaya',122),('PathhumThani','Nonthaburi',26),('PathhumThani','Bangkok',46),('NakhonNayok','Saraburi',58),
+                           ('PathhumThani','NakhonNayok',101),('PrachinBuri','NakhonNayok',20),('PrachinBuri','Bangkok',136),('Chachoengsao','Bangkok',82),
+                           ('Chachoengsao','NakhonNayok',75),('Chachoengsao','PrachinBuri',74),('Samut Prakan','Bangkok',29),('Samut Prakan','Chonburi',70),
+                           ('Chonburi','Chachoengsao',50),('Prachuap Khiri Khan','Phetchaburi',158),('Prachuap Khiri Khan','Chumphon',183),('Ranong','Chumphon',117),('Chumphon','Surat Thani',193),
+                           ('Surat Thani','Ranong',219),('Phang Nga','Ranong',226),('Phang Nga','Surat Thani',196),('Phang Nga','Phuket',87),
+                           ('Phang Nga','Krabi',86),('Krabi','Surat Thani',211),('Surat Thani','Nakhon Si Thammarat',134),('Nakhon Si Thammarat','Krabi',223),
+                           ('Krabi','Trang',131),('Trang','Phatthalung',56),('Phatthalung','Nakhon Si Thammarat',99),('Phatthalung','Songkhla',121),
+                           ('Songkhla','Satun',125),('Satun','Trang',140),('Trang','Nakhon Si Thammarat',123),('Songkhla','Yala',128),('Songkhla','Pattani',99),('Pattani','Yala',94),
+                           ('Narathiwat','Yala',128),('Narathiwat','Pattani',35),('Mae Hong Son','Chiang Mai',349),('Mae Hong Son','Tak',499),('Chiang Mai','Chiang Rai',182),
+                          ('Chiang Mai','Lampang',92),('Chiang Mai', 'Tak',265),('Chiang Mai','Lamphun',21),('Tak','Lamphun',244),('Tak','Sukhothai',79),('Tak','Kamphaeng Phet',68),
+                          ('Chiang Rai','Phayao',94),('Lampang','Chiang Rai',97),('Lampang','Phayao',131),('Lampang','Phrae',109),('Tak', 'Nakhon Sawan',185),('Lampang','Lamphun',71),
+                          ('Lampang','Tak',174),('Lampang','Sukhothai',207),('Phayao','Nan',176),('Nan', 'Uttaradit',191),('Phayao','Phrae',141),('Nan','Phrae',118),
+                          ('Phrae','Sukhothai',165),('Phrae','Uttaradit',74),('Sukhothai','Kamphaeng Phet',77),('Sukhothai','Phitsanulok',59),('Uttaradit','Phitsanulok',118),('Uttaradit','Sukhothai',100),
+                          ('Phitsanulok','Kamphaeng Phet',103),('Phitsanulok','Phichit',73),('Phitsanulok','Phetchabun',170),('Tak','Uthai Thani',234),
+                          ('Kamphaeng Phet','Phichit',90),('Kamphaeng Phet','Nakhon Sawan',117),('Phichit','Phetchabun',129),('Phichit','Nakhon Sawan',113),
+                          ('Phetchabun','Nakhon Sawan',184),('Uthai Thani','Nakhon Sawan',50),( 'Saraburi' , 'PathhumThani',85),('Saraburi','NakhonNayok',58), 
+                          ('PathhumThani','Nonthaburi',27 ),('PathhumThani','Bangkok', 42),
+                          ( 'NakhonNayok','PrachinBuri',29),('NakhonNayok','Chachoengsao',75),('Bangkok','Chachoengsao',85),('PrachinBuri','Chachoengsao',74),
+                          ('PrachinBuri','Sa Kaew',98),('Bangkok','PrachinBuri',145),('Bangkok','Samut Prakan',26),('Samut Prakan','Chachoengsao',71),
+                          ('Samut Prakan','Chonburi',64 ),('Chonburi','Chachoengsao',43 ),('Chachoengsao','Rayong',135),('Chonburi','Rayong',98), 
+                          ('Chanthaburi','Chonburi',164),('Rayong','Chanthaburi',110),('Chachoengsao','Chanthaburi',228 ), 
+                          ('Chachoengsao','Sa Kaew',245),('Sa Kaew','Chanthaburi',258), 
+                          ('Chanthaburi','Trat',70 )])
 
 TH = [('1.กระบี่'),('2.กรุงเทพมหานคร'),('3.กาญจนบุรี'),('4.กาฬสินธุ์'),('5.กำแพงเพชร'),('6.ขอนแก่น'),('7.จันทบุรี'),('8.ฉะเชิงเทรา'),
         ('9.ชลบุรี'),('10.ชัยนาท'),('11.ชัยภูมิ'),('12.ชุมพร'),('13.เชียงราย'),('14.เชียงใหม่'),('15.ตรัง'),('16.ตราด'),
@@ -308,7 +100,7 @@ ENG = [('1.Krabi'),('2.Bangkok'),('3.Kanchanaburi'),('4.Kalasin'),('5.Kamphaeng 
         ('73.Amnat Charoen'),('74.Udon Thani'),('75.Uttaradit'),('76.Uthai Thani'),('77.Ubon Ratchathani')]
 
 E = ['Krabi','Bangkok','Kanchanaburi','Kalasin','Kamphaeng Phet','Khon Kaen ','Chanthaburi','Chachoengsao',
-        'Chonburi','Chainat','Chaiyaphum','Chumphon','Chiang Mai ','Chiang Rai','Trang','Trat',
+        'Chonburi','Chainat','Chaiyaphum','Chumphon','Chiang Rai','Chiang Mai','Trang','Trat',
         'Tak','Nakhon Nayok','Nakhon Pathom','Nakhon Phanom','Nakhon Ratchasima','Nakhon Si Thammarat','Nakhon Sawan',
         'Nonthaburi','Narathiwat','Nan','Bueng Kan','Buriram','Pathum Thani','Prachuap Khiri Khan',
         'Prachinburi','Pattani','Phra Nakhon Si Ayutthaya','Phayao','Phang Nga','Phatthalung','Phichit',
@@ -400,7 +192,6 @@ def Count(Start,First,Second,Place) :
         if index == 1 :
                 F = nx.shortest_path(G,source=S_1,target=F_1,weight='weight')
                 P = nx.shortest_path(G,source=F_1,target=P_1,weight='weight')
-                C = nx.shortest_path_length(G,source=S_1,target=F_1,weight='weight') + nx.shortest_path_length(M,source=F_1,target=P_1,weight='weight')
 
                 A = nx.shortest_path_length(G,source=S_1,target=F_1,weight='weight')
                 B = nx.shortest_path_length(G,source=S_1,target=P_1,weight='weight')
@@ -417,14 +208,51 @@ def Count(Start,First,Second,Place) :
                         print(f'Shortest length from {S_1} to {P_1} : {W + B}')
 
         if index == 2 :
-                F = nx.shortest_path(G,source=S_1,target=F_1,weight='weight')
-                S = nx.shortest_path(G,source=F_1,target=S_2,weight='weight')
-                P = nx.shortest_path(G,source=S_2,target=P_1,weight='weight')
-                C = nx.shortest_path_length(G,source=S_1,target=F_1,weight='weight') + nx.shortest_path_length(G,source=F_1,target=S_2,weight='weight') + nx.shortest_path_length(G,source=S_2,target=P_1,weight='weight')
-                print(f'Shortest from {S_1} to {F_1} : {F}  ')
-                print(f'Shortest from {F_1} to {S_2} : {S}  ')
-                print(f'Shortest from {S_2} to {P_1} : {P} ')
-                print(f'Shortest length from {S_1} to {P_1} : {C}')
+                # A > B > C > D (A,B) (B,C) (C,D)
+                A_B = nx.shortest_path_length(G,source=S_1,target=F_1,weight='weight')
+                B_C = nx.shortest_path_length(G,source=F_1,target=S_2,weight='weight')
+                C_D = nx.shortest_path_length(G,source=S_2,target=P_1,weight='weight')
+                # A > B > D > C (A,B) (B,D) (D,C) 
+                B_D = nx.shortest_path_length(G,source=F_1,target=P_1,weight='weight')
+                D_C = nx.shortest_path_length(G,source=P_1,target=S_2,weight='weight')
+                # A > C > B > D (A,C) (C,B) (B,D)
+                A_C = nx.shortest_path_length(G,source=S_1,target=S_2,weight='weight')
+                C_B = nx.shortest_path_length(G,source=S_2,target=F_1,weight='weight')
+                # A > C > D > B (A,C) (C,D) (D,B)
+                D_B = nx.shortest_path_length(G,source=P_1,target=F_1,weight='weight')
+                # A > D > B > C (A,D) (D,B) (B,C)
+                A_D = nx.shortest_path_length(G,source=S_1,target=P_1,weight='weight')
+                # A > D > C > B (A,D) (D,C) (C,B)
+                if A_B < B_C < C_D :
+                        print(f"Shortest from {S_1} to {F_1} : {nx.shortest_path(G,source=S_1,target=F_1,weight='weight')}")
+                        print(f'Shortest from {F_1} to {S_2} : {nx.shortest_path(G,source=F_1,target=S_2,weight="weight")}')
+                        print(f'Shortest from {S_2} to {P_1} : {nx.shortest_path(G,source=S_2,target=P_1,weight="weight")} ')
+                        print(f'Shortest length all is {A_B + B_C + C_D}')
+                elif A_B < B_D < D_C :
+                        print(f'Shortest from {S_1} to {F_1} : {nx.shortest_path(G,source=S_1,target=F_1,weight="weight")}  ')
+                        print(f'Shortest from {F_1} to {P_1} : {nx.shortest_path(G,source=F_1,target=P_1,weight="weight")}  ')
+                        print(f'Shortest from {P_1} to {S_2} : {nx.shortest_path(G,source=P_1,target=S_2,weight="weight")} ')
+                        print(f'Shortest length all is {A_B + B_D + D_C}')
+                elif A_C < C_B < B_D :
+                        print(f'Shortest from {S_1} to {S_2} : {nx.shortest_path(G,source=S_1,target=S_2,weight="weight")}  ')
+                        print(f'Shortest from {S_2} to {F_1} : {nx.shortest_path(G,source=S_2,target=F_1,weight="weight")}  ')
+                        print(f'Shortest from {F_1} to {P_1} : {nx.shortest_path(G,source=F_1,target=P_1,weight="weight")} ')
+                        print(f'Shortest length all is {A_C + C_B + B_D}')
+                elif A_C < C_D < D_B :
+                        print(f'Shortest from {S_1} to {S_2} : {nx.shortest_path(G,source=S_1,target=S_2,weight="weight")}  ')
+                        print(f'Shortest from {S_2} to {P_1} : {nx.shortest_path(G,source=S_2,target=P_1,weight="weight")}  ')
+                        print(f'Shortest from {P_1} to {F_1} : {nx.shortest_path(G,source=P_1,target=F_1,weight="weight")} ')
+                        print(f'Shortest length all is {A_C + C_D + D_B}')
+                elif A_D < D_B < B_C :
+                        print(f'Shortest from {S_1} to {P_1} : {nx.shortest_path(G,source=S_1,target=P_1,weight="weight")}  ')
+                        print(f'Shortest from {P_1} to {F_1} : {nx.shortest_path(G,source=P_1,target=F_1,weight="weight")}  ')
+                        print(f'Shortest from {F_1} to {S_2} : {nx.shortest_path(G,source=F_1,target=S_2,weight="weight")} ')
+                        print(f'Shortest length all is {A_D + D_B + B_C}')
+                elif A_D < D_C < C_B :
+                        print(f'Shortest from {S_1} to {P_1} : {nx.shortest_path(G,source=S_1,target=P_1,weight="weight")}  ')
+                        print(f'Shortest from {P_1} to {S_2} : {nx.shortest_path(G,source=P_1,target=S_2,weight="weight")}  ')
+                        print(f'Shortest from {S_2} to {F_1} : {nx.shortest_path(G,source=S_2,target=F_1,weight="weight")} ')
+                        print(f'Shortest length all is {A_D + D_C + C_B}')
                 
         pos = nx.spring_layout(G)
         
